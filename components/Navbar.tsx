@@ -4,11 +4,11 @@ import { ThemeToggle } from './ThemeToggle'
 import Link from 'next/link'
 import { useDarkModeStore } from '@/store/useDarkModeStore'
 import { Button } from './ui/button'
+import { useUserStore } from '@/store/useUserStore'
 
 export const Navbar = () => {
     const { isDark } = useDarkModeStore()
-
-    const currentUser = false
+    const { currentUser } = useUserStore()
 
     return (
         <nav
@@ -20,7 +20,7 @@ export const Navbar = () => {
                     href='/'
                     className='text-3xl font-bold duration-200 hover:text-zinc-500'
                 >
-                    Blog Security Full Top
+                    SecureBlog 3000™
                 </Link>
             </div>
             <div className='flex gap-8'>

@@ -9,12 +9,13 @@ import { signupSchema } from '@/lib/signupSchema'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
+import { useUserStore } from '@/store/useUserStore'
 
 type SignUpFormData = yup.InferType<typeof signupSchema>
 
 export const Signup = () => {
     const router = useRouter()
-    const currentUser = false
+    const { currentUser } = useUserStore()
     const loading = false
 
     const {
