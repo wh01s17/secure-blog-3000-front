@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
+import { User } from "@/types/User";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,4 +34,12 @@ export default function RootLayout({
       </body>
     </html>
   );
+}
+
+export async function getCurrentUser(): Promise<User | null> {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/me`, {
+    credentials: 'include',
+  });
+  if (!res.ok) return null;
+  return res.json();
 }
