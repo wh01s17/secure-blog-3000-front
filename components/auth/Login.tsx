@@ -7,6 +7,7 @@ import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import Link from 'next/link'
 import { Loading } from '../ui/Loading'
+import { useUserStore } from '@/store/useUserStore'
 
 export const Login = () => {
     const [creds, setCreds] = useState({
@@ -15,8 +16,9 @@ export const Login = () => {
     })
     const [loading, setLoading] = useState(false)
     const router = useRouter()
+    const login = useUserStore((state) => state.login)
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         if (!creds.email || !creds.password) {
@@ -24,12 +26,35 @@ export const Login = () => {
             return
         }
 
+        setLoading(true)
+
         try {
+            const res = await fetch('/api/auth/login', {
+                method: 'POST',
+                credentials: 'include',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(creds),
+            })
+
+            if (!res.ok) {
+                setLoading(false)
+                toast.error('Correo y/o contraseña incorrectos')
+                return
+            }
+
+            // Usar los datos del login directamente
+            const userData = await res.json()
+            console.log('Usuario logueado:', userData)
+
+            login(userData.user)
             toast.success('Bienvenido 😬')
             router.push('/')
-        } catch (error) {
-            toast.error('Correo y/o contraseña incorrectos')
-            console.error(error)
+
+        } catch (err) {
+            console.error(err)
+            toast.error('Error inesperado al iniciar sesión')
+        } finally {
+            setLoading(false)
         }
     }
 

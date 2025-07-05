@@ -8,7 +8,7 @@ import { useUserStore } from '@/store/useUserStore'
 
 export const Navbar = () => {
     const { isDark } = useDarkModeStore()
-    const { currentUser } = useUserStore()
+    const { user } = useUserStore()
 
     return (
         <nav
@@ -25,7 +25,7 @@ export const Navbar = () => {
             </div>
             <div className='flex gap-8'>
                 {
-                    currentUser
+                    user
                         ? <div>
                             <Link href='/blog'>
                                 <Button variant="ghost">
