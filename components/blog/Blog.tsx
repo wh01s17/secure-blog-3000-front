@@ -82,7 +82,7 @@ export const Blog = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 px-6 sm:px-12 md:px-20 lg:px-28 xl:px-36 2xl:px-40 py-6 sm:py-8 lg:py-10 max-w-7xl mx-auto">
+                <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 px-6 sm:px-10 md:px-20 lg:px-28 xl:px-36 2xl:px-40 py-6 sm:py-8 lg:py-10 max-w-7xl mx-auto">
                     {filteredPost.map(post => (
                         // Asegúrate que CardPost tenga clases como max-w-full o max-w-4xl
                         <CardPost key={post.id} post={post} />
