@@ -1,5 +1,4 @@
 'use client'
-
 import { usePost } from '@/hooks/usePost'
 import React from 'react'
 import { Loading } from '../ui/Loading'

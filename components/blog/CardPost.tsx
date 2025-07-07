@@ -30,7 +30,7 @@ export const CardPost = ({ post }: { post: Post }) => {
 
 
     return (
-        <article className="group w-full max-w-3xl mx-auto bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black rounded-xl sm:rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden mx-4 sm:mx-auto">
+        <article className="group w-full max-w-3xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black rounded-xl sm:rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden mx-4 sm:mx-auto">
             {/* Header con gradiente sutil */}
             <div className="relative p-4 sm:p-6 pb-3 sm:pb-4 bg-gradient-to-r from-transparent to-gray-100/50 dark:to-gray-800/50">
                 {/* Badge de categoría */}
