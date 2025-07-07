@@ -29,7 +29,7 @@ export const Navbar = () => {
             {/* Desktop Navigation */}
             <div className='hidden md:flex gap-4 lg:gap-8 items-center'>
                 {
-                    !user
+                    user
                         ? <div className="flex gap-2 lg:gap-4">
                             <Link href='/blog'>
                                 <Button variant="ghost" size="sm" className="lg:text-base">

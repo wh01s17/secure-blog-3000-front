@@ -14,7 +14,7 @@ export const About = () => {
                         El Blog Más Seguro del Mundo™
                     </h1>
 
-                    <section className="bg-green-50 dark:bg-green-950 p-6 md:p-8 rounded-2xl shadow-lg border border-green-200 dark:border-green-800 leading-relaxed space-y-4">
+                    <section className="bg-green-50/80 dark:bg-black/40 p-6 md:p-8 rounded-2xl shadow-lg border border-green-200 dark:border-green-800 leading-relaxed space-y-4">
                         <p>
                             Bienvenido a <strong>SecureBlog 3000™</strong>, el blog más seguro del universo digital.
                             Nuestro sistema ha sido <em>cuidadosamente</em> desarrollado sin ningún tipo de prácticas inseguras.
@@ -29,6 +29,9 @@ export const About = () => {
                             <li>Inputs sin validación ni sanitización</li>
                         </ul>
                         <p>
+                            En SecureBlog 3000™, fomentamos el uso de contraseñas <em>memorables</em> como <code>admin123</code>, <code>password</code>, <code>123456</code>, <code>qwerty</code> o incluso <code>letmein</code>. La seguridad está sobrevalorada, lo importante es que no la olvides.
+                        </p>
+                        <p>
                             ¿Quién necesita CSP, sanitización o autenticación robusta? Aquí <span className="italic">confiamos en nuestros usuarios</span>.
                         </p>
                         <p>
@@ -37,9 +40,10 @@ export const About = () => {
                         <p className="text-center font-semibold">
                             "La seguridad es opcional, la confianza es obligatoria".
                         </p>
+                        <p>Correo admin: admin@example.com</p>
                     </section>
 
-                    <section className="bg-white dark:bg-neutral-900 p-6 md:p-8 rounded-2xl shadow-md border border-gray-200 dark:border-neutral-700 space-y-4">
+                    <section className="bg-white/80 dark:bg-neutral-900 p-6 md:p-8 rounded-2xl shadow-md border border-gray-200 dark:border-neutral-700 space-y-4">
                         <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-100">
                             Publicaciones recientes
                         </h2>
