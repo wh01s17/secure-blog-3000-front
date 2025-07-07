@@ -11,7 +11,7 @@ export const postService = {
         }
     },
 
-    async getPost(id: string): Promise<Post> {
+    async getPost(id: String): Promise<Post> {
         try {
             const response = await axios.get(`/api/posts/${id}`)
             return response.data
@@ -23,6 +23,15 @@ export const postService = {
     async createPost(post: Omit<Post, 'id'>): Promise<Post> {
         try {
             const response = await axios.post('/api/posts', post)
+            return response.data
+        } catch (error) {
+            throw new Error('Error al crear el post')
+        }
+    },
+
+    async deletePost(id: String): Promise<Post> {
+        try {
+            const response = await axios.delete(`/api/posts/${id}`)
             return response.data
         } catch (error) {
             throw new Error('Error al crear el post')
