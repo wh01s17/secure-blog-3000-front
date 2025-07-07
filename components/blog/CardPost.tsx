@@ -38,9 +38,6 @@ export const CardPost = ({ post }: { post: Post }) => {
                     <Badge variant="secondary" className="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border-gray-300 dark:border-gray-700 text-xs sm:text-sm">
                         Artículo
                     </Badge>
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block">
-                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 dark:text-gray-400 group-hover:translate-x-1 transition-transform" />
-                    </div>
                 </div>
 
                 {/* Título */}

@@ -40,7 +40,7 @@ export const About = () => {
                         <p className="text-center font-semibold">
                             "La seguridad es opcional, la confianza es obligatoria".
                         </p>
-                        <p>Correo admin: admin@example.com</p>
+                        <p>Correo administrador: admin@example.com</p>
                     </section>
 
                     <section className="bg-white/80 dark:bg-neutral-900 p-6 md:p-8 rounded-2xl shadow-md border border-gray-200 dark:border-neutral-700 space-y-4">

@@ -15,7 +15,7 @@ type SignUpFormData = yup.InferType<typeof signupSchema>
 
 export const Signup = () => {
     const router = useRouter()
-    const { currentUser } = useUserStore()
+    const { user } = useUserStore()
     const loading = false
 
     const {
@@ -40,10 +40,10 @@ export const Signup = () => {
     }
 
     useEffect(() => {
-        if (currentUser) {
+        if (user) {
             router.push('/')
         }
-    }, [currentUser, router])
+    }, [user, router])
 
     return (
         <section className="flex flex-col justify-center items-center 2xl:min-h-[calc(100dvh-214px)]">
